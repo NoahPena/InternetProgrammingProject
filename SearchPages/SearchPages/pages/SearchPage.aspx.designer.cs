@@ -40,13 +40,31 @@ namespace SearchPages.pages {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// TitleSearchBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TitleSearchBox;
+        
+        /// <summary>
+        /// ShowHideButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ShowHideButton;
+        
+        /// <summary>
+        /// advancedOptions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl advancedOptions;
         
         /// <summary>
         /// searchYearDropdown control.
@@ -67,22 +85,22 @@ namespace SearchPages.pages {
         protected global::System.Web.UI.WebControls.DropDownList searchGenreDropdown;
         
         /// <summary>
-        /// RadioButton1 control.
+        /// IsBothYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        protected global::System.Web.UI.WebControls.RadioButton IsBothYes;
         
         /// <summary>
-        /// RadioButton2 control.
+        /// IsBothNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        protected global::System.Web.UI.WebControls.RadioButton IsBothNo;
         
         /// <summary>
         /// Button1 control.

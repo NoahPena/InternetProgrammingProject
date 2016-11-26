@@ -18,19 +18,26 @@
         
         <asp:Label ID="Label1" runat="server" Text="Title: "></asp:Label>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IntProgGroupProjectConnectionString %>" SelectCommand="SELECT * FROM [Books]"></asp:SqlDataSource>
-        <asp:TextBox ID="TextBox1" runat="server" Width="242px"></asp:TextBox>
+        <asp:TextBox ID="TitleSearchBox" runat="server" Width="242px"></asp:TextBox>
 
 
-
-        
     
         <br />
         
 
         
-    
+   
+        <asp:Button ID="ShowHideButton" runat="server" Text="Show/Hide Options" OnClick="Button2_Click" />
+
+        <br />
+
+
     </div>
 
+
+    <div id="advancedOptions" runat="server">
+        
+        <p></p>
         Year:<asp:DropDownList ID="searchYearDropdown" runat="server">
         </asp:DropDownList>
         <p>
@@ -42,13 +49,18 @@
         <p>
             Is it a book and a movie?</p>
 
-        <asp:RadioButton ID="RadioButton1" runat="server" Text="Yes" />
-        <asp:RadioButton ID="RadioButton2" runat="server" Text="No" />
+        <asp:RadioButton ID="IsBothYes" runat="server" Text="Yes" />
+        <asp:RadioButton ID="IsBothNo" runat="server" Text="No" Checked="True" />
 
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Search" />
 
+        </div>
+
+        <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button1_Click" />
+
+
+    
     </form>
 </body>
 </html>

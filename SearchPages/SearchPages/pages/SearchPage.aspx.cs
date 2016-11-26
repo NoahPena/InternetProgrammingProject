@@ -94,5 +94,26 @@ namespace SearchPages.pages
 
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+               
+            if(advancedOptions.Visible)
+            {
+
+            }
+            else
+            {
+                String name = TitleSearchBox.Text;
+
+                SqlCommand command = new SqlCommand();
+
+            }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            advancedOptions.Visible = !advancedOptions.Visible;
+        }
     }
 }
