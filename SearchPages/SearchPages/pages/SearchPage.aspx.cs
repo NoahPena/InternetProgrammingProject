@@ -40,6 +40,9 @@ namespace SearchPages.pages
 
             db.Open();
 
+            years.Add("Any");
+            genres.Add("Any");
+
             try
             {
 
@@ -97,23 +100,37 @@ namespace SearchPages.pages
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-               
-            if(advancedOptions.Visible)
-            {
 
+            if (advancedOptions.Visible)
+            {
+                Session["AdvancedOptions"] = true;
+                Session["Name"] = TitleSearchBox.Text;
+                Session["Year"] = searchYearDropdown.Text;
+                Session["Genre"] = searchGenreDropdown.Text;
+
+                if(BookAndMovieList.SelectedItem.Text.Equals("Yes"))
+                {
+                    Session["BookAndMovie"] = true;
+                }
+                else
+                {
+                    Session["BookAndMovie"] = false;
+                }
             }
             else
             {
-                String name = TitleSearchBox.Text;
-
-                SqlCommand command = new SqlCommand();
+                Session["AdvancedOptions"] = false;
+                Session["Name"] = TitleSearchBox.Text;
 
             }
+
+            Response.Redirect("ResultsPage.aspx?");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             advancedOptions.Visible = !advancedOptions.Visible;
         }
+
     }
 }

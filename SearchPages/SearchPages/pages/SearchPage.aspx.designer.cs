@@ -85,13 +85,22 @@ namespace SearchPages.pages {
         protected global::System.Web.UI.WebControls.DropDownList searchGenreDropdown;
         
         /// <summary>
+        /// BookAndMovieList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList BookAndMovieList;
+        
+        /// <summary>
         /// IsBothYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton IsBothYes;
+        protected global::System.Web.UI.WebControls.ListItem IsBothYes;
         
         /// <summary>
         /// IsBothNo control.
@@ -100,7 +109,7 @@ namespace SearchPages.pages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton IsBothNo;
+        protected global::System.Web.UI.WebControls.ListItem IsBothNo;
         
         /// <summary>
         /// Button1 control.

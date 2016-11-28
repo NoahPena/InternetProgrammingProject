@@ -7,11 +7,12 @@
     <title></title>
     <style type="text/css">
         #form1 {
-            height: 303px;
+            height: 314px;
+            margin-bottom: 3px;
         }
     </style>
 </head>
-<body style="height: 299px">
+<body style="height: 314px">
     <form id="form1" runat="server">
     <div>
 
@@ -49,8 +50,10 @@
         <p>
             Is it a book and a movie?</p>
 
-        <asp:RadioButton ID="IsBothYes" runat="server" Text="Yes" />
-        <asp:RadioButton ID="IsBothNo" runat="server" Text="No" Checked="True" />
+        <asp:RadioButtonList ID="BookAndMovieList" runat="server">
+            <asp:ListItem ID="IsBothYes" runat="server" Text="Yes"/>
+            <asp:ListItem ID="IsBothNo" runat="server" Text="No" Selected="True"/>
+        </asp:RadioButtonList>
 
         <br />
         <br />

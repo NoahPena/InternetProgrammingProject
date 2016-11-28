@@ -10,7 +10,13 @@
     <form id="form1" runat="server">
     <div>
     
+        Results:<br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Go Back" />
+    
     </div>
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IntProgGroupProjectConnectionString %>" SelectCommand="SELECT * FROM [Books]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
