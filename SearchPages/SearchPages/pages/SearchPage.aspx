@@ -18,7 +18,7 @@
 
         
         <asp:Label ID="Label1" runat="server" Text="Title: "></asp:Label>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IntProgGroupProjectConnectionString %>" SelectCommand="SELECT * FROM [Books]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IntProgGroupProjectConnectionString %>" SelectCommand="SELECT * FROM [BOOK_INVENTORY]"></asp:SqlDataSource>
         <asp:TextBox ID="TitleSearchBox" runat="server" Width="242px"></asp:TextBox>
 
 

@@ -20,31 +20,32 @@ namespace SearchPages.pages
             SqlConnection db = new SqlConnection(SqlDataSource1.ConnectionString);
             SqlCommand selectFromMovies = new SqlCommand();
             selectFromMovies.CommandType = System.Data.CommandType.Text;
-            selectFromMovies.CommandText = "SELECT [Year] FROM [Movies]";
+            selectFromMovies.CommandText = "SELECT [YEAR_PUBLISHED] FROM [MOVIE_INVENTORY]";
             selectFromMovies.Connection = db;
 
             SqlCommand selectFromBooks = new SqlCommand();
             selectFromBooks.CommandType = System.Data.CommandType.Text;
-            selectFromBooks.CommandText = "SELECT [Year] FROM [Books]";
+            selectFromBooks.CommandText = "SELECT [YEAR_PUBLISHED] FROM [BOOK_INVENTORY]";
             selectFromBooks.Connection = db;
 
             SqlCommand selectGenreFromMovies = new SqlCommand();
             selectGenreFromMovies.CommandType = System.Data.CommandType.Text;
-            selectGenreFromMovies.CommandText = "SELECT [Genre] FROM [Movies]";
+            selectGenreFromMovies.CommandText = "SELECT [GENRE] FROM [MOVIE_INVENTORY]";
             selectGenreFromMovies.Connection = db;
 
             SqlCommand selectGenreFromBooks = new SqlCommand();
             selectGenreFromBooks.CommandType = System.Data.CommandType.Text;
-            selectGenreFromBooks.CommandText = "SELECT [Genre] FROM [Books]";
+            selectGenreFromBooks.CommandText = "SELECT [GENRE] FROM [BOOK_INVENTORY]";
             selectGenreFromBooks.Connection = db;
 
-            db.Open();
+            
 
             years.Add("Any");
             genres.Add("Any");
 
             try
             {
+                db.Open();
 
                 using (SqlDataReader readerMovies = selectFromMovies.ExecuteReader())
                 {
